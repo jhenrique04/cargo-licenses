@@ -108,3 +108,5 @@ Licensed under either of:
     MIT license (http://opensource.org/licenses/MIT)
 
 at your option.
+
+For more information, visit the documentation on [crates.io](https://crates.io/crates/cargo-licenses).
