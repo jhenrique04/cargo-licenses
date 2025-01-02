@@ -36,6 +36,12 @@ A command-line tool that scans your Cargo.toml for direct dependencies (optional
     This places cargo-licenses in ~/.cargo/bin, so you can run it from any project folder.
     Usage
 
+### NetBSD
+On NetBSD a package is available from the official repositories. To install it, simply run:
+```bash
+pkgin install cargo-licenses
+```
+
 ## Usage
 To generate a report:
 
