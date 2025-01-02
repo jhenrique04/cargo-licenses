@@ -1,5 +1,5 @@
 //! A tool that:
-//! - Parses only [dependencies], [dev-dependencies], and [build-dependencies] from Cargo.toml
+//! - Parses only \[dependencies\], \[dev-dependencies\], and \[build-dependencies\] from Cargo.toml
 //! - Optionally skips "optional" dependencies
 //! - Uses semver to find the newest crates.io version satisfying "0.12", etc.
 //! - Fetches license info from crates.io for direct dependencies only
@@ -151,7 +151,7 @@ fn main() -> Result<()> {
 }
 
 /// Parse Cargo.toml, extracting direct dependencies from
-/// [dependencies], [dev-dependencies], and [build-dependencies] if requested.
+/// \[dependencies\], \[dev-dependencies\], and \[build-dependencies\] if requested.
 /// If `skip_optional` is true, skip dependencies with `optional = true`.
 fn parse_cargo_toml(
     path: &str,
@@ -257,7 +257,7 @@ fn parse_deps_table(
 }
 
 /// Build a license report for each direct dependency from Cargo.toml,
-/// using crates.io's "GET /crates/<name>/versions" and semver matching
+/// using crates.io's "GET /crates/&lt;name&gt;/versions" and semver matching
 /// to find the newest version that satisfies the user's version_req.
 fn build_license_report(deps: &[Dep], client: &Client) -> Result<Vec<LicenseReport>> {
     let mut reports = Vec::new();
@@ -286,7 +286,7 @@ fn build_license_report(deps: &[Dep], client: &Client) -> Result<Vec<LicenseRepo
     Ok(reports)
 }
 
-/// 1) Query crates.io: GET /api/v1/crates/<crate>/versions
+/// 1) Query crates.io: GET /api/v1/crates/&lt;crate&gt;/versions
 /// 2) Parse the versions array
 /// 3) Use semver to find the newest version that satisfies <dep.version_req>.
 fn fetch_best_match(

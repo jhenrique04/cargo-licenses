@@ -6,6 +6,11 @@ description = "A tool to audit license information for Rust projects"
 license = "MIT OR Apache-2.0"
 repository = "https:/github.com/jhenrique04/cargo-licenses"
 readme = "README.md"
+authors = ["J Henrique <jhenrique04@proton.me>"]
+keywords = ["licenses", "audit", "dependencies", "cargo"]
+categories = ["development-tools", "command-line-utilities"]
+homepage = "https://github.com/jhenrique04/cargo-licenses"
+documentation = "https://docs.rs/cargo-licenses"
 
 
 [dependencies]
