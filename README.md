@@ -14,7 +14,11 @@ A command-line tool that scans your Cargo.toml for direct dependencies (optional
     - `--dev` to include dev-dependencies  
     - `--build` to include build-dependencies  
     - `--skip-optional` to skip optional dependencies  
+    - `--deny` [LICENSE] to block crates with specified licenses.
+    - `--allow` [LICENSE] to only allow crates with specified licenses.
+    - Supports complex expressions like `"MIT OR Apache-2.0"` for flexible rules.    
     - `--format [md|json]` to choose the report format
+
 
 ## Installation
 1. Clone this repository (or download the code).
@@ -33,36 +37,41 @@ A command-line tool that scans your Cargo.toml for direct dependencies (optional
     Usage
 
 ## Usage
-Within the project directory (or any Rust project you want to analyze):
+To generate a report:
 
 ```bash
 # Generate a Markdown report (.license_report.md)
-cargo run generate
+cargo-licenses generate
 
 # Generate a JSON report (.license_report.json)
-cargo run generate --format json
+cargo-licenses generate --format json
 
 # Include dev-dependencies and build-dependencies as well
-cargo run generate --dev --build
+cargo-licenses generate --dev --build
 
 # Skip optional dependencies
-cargo run generate --skip-optional
+cargo-licenses generate --skip-optional
+
+```
+Check licenses against user-defined policies:
+```bash
+# Check licenses against a deny list
+cargo-licenses check --deny MIT --deny Apache-2.0
+
+# Check licenses against an allow list
+cargo-licenses check --allow MIT --allow BSD-3-Clause
+
+# Check licenses by parsing expressions
+cargo-licenses check --deny "MIT OR Apache-2.0"
 ```
 
-## Other Commands
 List direct dependencies and their version constraints (without fetching license info):
 
 ```bash    
-cargo run list [--dev] [--build] [--skip-optional]
+cargo-licenses list [--dev] [--build] [--skip-optional]
 ```
 
 Show the tool version:
-
-```bash
-cargo run version
-```
-
-or (for globally installed binary) 
 
 ```bash  
 cargo-licenses version
