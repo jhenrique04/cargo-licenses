@@ -36,6 +36,14 @@ A command-line tool that scans your Cargo.toml for direct dependencies (optional
     This places cargo-licenses in ~/.cargo/bin, so you can run it from any project folder.
     Usage
 
+### Arch Linux
+  On Arch Linux a package is available from the AUR repositories. To install it, simply run:
+  ```bash
+  paru -S cargo-licenses
+  # Or, if you use yay:
+  yay -S cargo-licenses
+  ```
+
 ### NetBSD
   On NetBSD a package is available from the official repositories. To install it, simply run:
   ```bash
