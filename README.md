@@ -37,10 +37,17 @@ A command-line tool that scans your Cargo.toml for direct dependencies (optional
     Usage
 
 ### NetBSD
-On NetBSD a package is available from the official repositories. To install it, simply run:
-```bash
-pkgin install cargo-licenses
-```
+  On NetBSD a package is available from the official repositories. To install it, simply run:
+  ```bash
+  pkgin install cargo-licenses
+  ```
+
+### Pop!_OS
+
+  On Pop!_OS, a package is available from the official repositories. To install it, run:
+  ```bash
+  sudo apt install cargo-licenses
+  ```
 
 ## Usage
 To generate a report:
