@@ -1,5 +1,6 @@
-# cargo-licenses
+# cargo-licenses ![Downloads](https://img.shields.io/crates/d/cargo-licenses?label=Downloads&logo=rust) ![Crate Version](https://img.shields.io/crates/v/cargo-licenses?label=Version)
 A command-line tool that scans your Cargo.toml for direct dependencies (optionally including dev-dependencies and build-dependencies), fetches their license info from crates.io, and generates a concise license report in either Markdown or JSON.
+
 
 ## Features
 - **Direct Dependency Parsing**  
